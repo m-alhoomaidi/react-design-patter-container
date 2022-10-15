@@ -8,3 +8,12 @@
 img {
     align-self: center;
 }
+
+
+.card {
+    width: 300px;
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}

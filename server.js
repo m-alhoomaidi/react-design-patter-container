@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const axios = require("axios");
 const app = express()
 const movies = [
     {
@@ -75,11 +76,26 @@ app.get('/movies', (req, res) => {
 })
 
 app.get('/movie/:id', (req, res) => {
-    
+
     const { id } = req.params
     const movei = movies.filter((item) => item.id == id)
     res.json(movei)
-    
+
+})
+
+app.get('/posts', async (req, res) => {
+
+    const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    const data = await response.data
+
+    res.json(data)
+})
+
+app.get('/photos', async (req, res) => {
+
+    const response = await axios.get('https://jsonplaceholder.typicode.com/photos')
+    const data = await response.data
+    res.json(data)
 })
 app.listen(8080, () => {
     console.log("the server is running in 8080 port ")
