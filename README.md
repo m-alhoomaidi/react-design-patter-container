@@ -1,4 +1,4 @@
-## React Design Patter - Container Patter 
+## React Design Patter - Container Pattern
 
 This project for design pattern using container pattern.
 
